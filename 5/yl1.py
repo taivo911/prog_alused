@@ -1,13 +1,13 @@
-fail = open("rebased.txt", encoding="UTF-8")
+fail =  open("arvud1.txt", encoding = "UTF-8")
 vastuvõetud = []
 for rida in fail:
      vastuvõetud.append(int(rida))
 fail.close()
-#print(vastuvõetud[1:])
 
-print('Sisesta aasta, et leida sisseastujate arv: ')
-a = int(input()) - 2011 #lahutame soovitud aastast, et võrdsustada ridade arvuga
-for i in range(9):
-     if i == a:
-          print('Vastu võeti ' + str(vastuvõetud[i]) + " õpilast.")
-print("Ilusat päeva jätku!")
+aasta = int(input("Sisesta aasta (2011-2019): "))
+algus=[2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019]
+
+indeks = algus.index(aasta)
+inimesi = vastuvõetud[indeks]
+
+print("Aastal " + str(aasta) + " oli " + str(inimesi) + " vastu võetud üliõpilast.")
