@@ -1,17 +1,12 @@
+ring = int(input("Sisesta ringide arv: "))
 
-ringide_arv = int(input("Sisestage ringide arv: "))
+ringi_nr = 1
+porgand = 0
 
-ringi_number = 1 # alustame jooksu 1. ringist
-
-porgandite_arv = 0
-
-while(ringi_number <= ringide_arv):
-    print(str(ringi_number) + ". ring")  #protsessi kontrollida saab printides ringi_number, kuvab 7 tk
-    #suurendame muutuja v22rtust ringi l2bimisel
-    if(ringi_number % 2 == 0):
-        print("Said " + str(ringi_number) + " porgandit.")
-        porgandite_arv = porgandite_arv + ringi_number
-        print("Hetkel on kokku " + str(porgandite_arv) + " porgandit.")
-    ringi_number += 1
-
-print("Porgandite koguarv on " + str(porgandite_arv))
+while (ringi_nr <= ring):
+    print(str(ringi_nr) + ".ring")
+    if(ringi_nr % 2==0):
+        print("said " + str(ringi_nr) + " porgandit")
+        porgand = porgand + ringi_nr
+        print("Porgandite koguarv on " + str(porgand))
+    ringi_nr +=1
